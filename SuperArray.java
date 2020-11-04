@@ -33,5 +33,12 @@ public class SuperArray{
   }
     else return null;
   }
-  //1g
+  //Private Methods 1g
+  private void resize(){
+    String[] biggerArray=new String[data.length*2];
+        for (int i=0; i<data.length;i++){
+            biggerArray[i]=data[i];
+        }
+        data= biggerArray;
+  }
 }
