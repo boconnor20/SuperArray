@@ -7,6 +7,10 @@ public class SuperArray{
     data= new String[10];
     size=0;
   }
+  public SuperArray(int initialCapacity){
+    data= new String[initialCapacity];
+    size=0;
+  }
   //Methods 1c
   public int size(){
     return size;
@@ -36,6 +40,40 @@ public class SuperArray{
   }
     else return null;
   }
+  //class 11/4/20
+  public boolean isEmpty(){
+    return (size==0);
+  }
+
+  public void clear(){
+    data=new String[10];
+    size=0;
+  }
+
+  public String toString(){
+    String result="[";
+    for (int i=0; i<size-1;i++){
+      result += data[i] + ", ";
+    }
+    result +=data[size-1]+ "]";
+    return result;
+  }
+
+  public boolean contains(String s){
+    for(int i=0; i<size; i++){
+      if (data[i].equals(s))
+        return true;
+    }
+    return false;
+  }
+  public int indexOf(String s){
+    for (int i=0; i<size; i++){
+      if (data[i].equals(s))
+        return i;
+    }
+    return -1;
+  }
+
   //Private Methods 1g
   private void resize(){
     String[] biggerArray=new String[data.length*2];
