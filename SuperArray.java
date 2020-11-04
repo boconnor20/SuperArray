@@ -13,6 +13,9 @@ public class SuperArray{
   }
   //1d
   public boolean add(String element){
+    if (size>= data.length){
+      resize();
+    }
     data[size] = element;
     size ++;
     return true;
