@@ -73,6 +73,13 @@ public class SuperArray{
     }
     return -1;
   }
+  public void add(int index, String element){
+    for (int i=size; i>index; i--){
+      data[i]=data[i-1];
+    }
+    data[index]=element;
+    size++;
+  }
 
   //Private Methods 1g
   private void resize(){
