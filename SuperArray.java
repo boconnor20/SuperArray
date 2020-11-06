@@ -73,12 +73,22 @@ public class SuperArray{
     }
     return -1;
   }
+
   public void add(int index, String element){
     for (int i=size; i>index; i--){
       data[i]=data[i-1];
     }
     data[index]=element;
     size++;
+  }
+
+  public String remove(int index){
+    String removed=data[index];
+    for (int i=index; i<size()-1;i++){
+      data[i]=data[i+1];
+    }
+    size--;
+    return removed;
   }
 
   //Private Methods 1g
