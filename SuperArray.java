@@ -52,10 +52,15 @@ public class SuperArray{
 
   public String toString(){
     String result="[";
+    if (size==0){
+      return "[]";
+    }
+    else{
     for (int i=0; i<size-1;i++){
       result += data[i] + ", ";
     }
     result +=data[size-1]+ "]";
+  }
     return result;
   }
 
@@ -83,14 +88,19 @@ public class SuperArray{
   }
 
   public String remove(int index){
-    String removed=data[index];
-    if (size>0){
-    for (int i=index; i<size()-1;i++){
-      data[i]=data[i+1];
-      }
-    size--;
+    if (index>=size||index<0){
+      return null;
+    }
+    else {
+      String removed=data[index];
+      if (size>0){
+        for (int i=index; i<size()-1;i++){
+          data[i]=data[i+1];
+        }
+      size--;
     }
     return removed;
+    }
   }
 
    public String[] toArray(){
