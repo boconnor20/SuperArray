@@ -91,6 +91,14 @@ public class SuperArray{
     return removed;
   }
 
+   public String[] toArray(){
+     String[] safe=new String[size];
+     for(int i=0; i<size; i++){
+       safe[i]=data[i];
+     }
+     return safe;
+   }
+
   //Private Methods 1g
   private void resize(){
     String[] biggerArray=new String[data.length*2];
