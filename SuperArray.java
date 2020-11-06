@@ -84,10 +84,12 @@ public class SuperArray{
 
   public String remove(int index){
     String removed=data[index];
+    if (size>0){
     for (int i=index; i<size()-1;i++){
       data[i]=data[i+1];
-    }
+      }
     size--;
+    }
     return removed;
   }
 
@@ -97,7 +99,7 @@ public class SuperArray{
        safe[i]=data[i];
      }
      return safe;
-   }
+  }
 
   //Private Methods 1g
   private void resize(){

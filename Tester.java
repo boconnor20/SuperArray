@@ -1,6 +1,6 @@
 public class Tester{
   public static void main(String[] args) {
-    SuperArray words = new SuperArray();
+    /*SuperArray words = new SuperArray();
     words.add("kani");
     words.add("uni");
     words.add("ebi");
@@ -9,7 +9,7 @@ public class Tester{
     }
     System.out.println(words);
     System.out.println(words.contains("kani"));
-    System.out.println(words.indexOf("kani"));
+    System.out.println(words.indexOf("kani"));*/
 
 
   }
