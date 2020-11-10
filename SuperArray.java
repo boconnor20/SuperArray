@@ -110,6 +110,17 @@ public class SuperArray{
      }
      return safe;
   }
+  //HW16
+  public int lastIndexOf(String value){
+    int lIndex = -1;
+    for(int i = size()-1; i >= 0; i --){
+      if(data[i].equals(value)){
+        lIndex = i;
+        return lIndex;
+      }
+    }
+    return lIndex;
+  }
 
   //Private Methods 1g
   private void resize(){
