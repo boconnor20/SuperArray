@@ -41,7 +41,7 @@ public class Demo{
 
 
   public static void main(String[]args){
-    SuperArray words = new SuperArray();
+    /*SuperArray words = new SuperArray();
     //grouped to save vertical space
     words.add("kani");   words.add("uni");     words.add("ebi");     words.add("una");
     words.add("una");    words.add("ebi");     words.add("kani");    words.add("una");
@@ -56,6 +56,11 @@ public class Demo{
     System.out.println(words);
     removeDuplicates(words);
     System.out.println(words);
-    System.out.println(findOverlap(numbers,numbers2));
+    System.out.println(findOverlap(numbers,numbers2));*/
+    SuperArray a= new SuperArray();
+    a.add("a"); a.add("b"); a.add("c"); a.add("d"); a.add("e"); a.add("f");
+    SuperArray b= new SuperArray();
+    b.add("0"); b.add("1"); b.add("2"); b.add("3");
+    System.out.println(zip (a,b));
   }
 }
