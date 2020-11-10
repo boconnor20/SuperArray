@@ -111,6 +111,7 @@ public class SuperArray{
      return safe;
   }
   //HW16
+  //c
   public int lastIndexOf(String value){
     int lIndex = -1;
     for(int i = size()-1; i >= 0; i --){
@@ -120,6 +121,18 @@ public class SuperArray{
       }
     }
     return lIndex;
+  }
+  //d
+  public boolean equals(SuperArray other){
+    if(size()!=other.size()){
+      return false;
+    }
+    for(int i = 0; i < size(); i ++){
+      if(data[i]!=other.get(i)){
+        return false;
+      }
+    }
+    return true;
   }
 
   //Private Methods 1g
