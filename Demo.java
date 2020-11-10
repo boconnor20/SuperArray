@@ -17,6 +17,29 @@ public class Demo{
     removeDuplicates(returnSA);
     return returnSA;
   }
+  public static SuperArray zip(SuperArray a, SuperArray b){
+     int shortl = Math.min(a.size(),b.size());
+     int length = Math.max(a.size(),b.size());
+     SuperArray output = new SuperArray(length);
+
+     for(int i =0; i < shortl ; i++){
+       output.add(a.get(i));
+       output.add(b.get(i));
+     }
+     if(shortl != length){
+       for(int i = shortl; i < length; i ++){
+         if(a.size()>b.size()){
+           output.add(a.get(i));
+         }
+         else{
+           output.add(b.get(i));
+         }
+       }
+     }
+     return output;
+  }
+
+
   public static void main(String[]args){
     SuperArray words = new SuperArray();
     //grouped to save vertical space
