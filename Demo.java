@@ -57,12 +57,17 @@ public class Demo{
     removeDuplicates(words);
     System.out.println(words);
     System.out.println(findOverlap(numbers,numbers2));*/
-    SuperArray OogaBooga=new SuperArray(-10);
+    try{SuperArray OogaBooga=new SuperArray(-10);
     System.out.println(OogaBooga);
+    }
+    catch (IllegalArgumentException e){
+      System.out.println("Woah buddy we don't do that here");
+    }
     SuperArray a= new SuperArray();
     a.add("a"); a.add("b"); a.add("c"); a.add("d"); a.add("e"); a.add("f");
     SuperArray b= new SuperArray();
     b.add("0"); b.add("1"); b.add("2"); b.add("3");
     System.out.println(zip (a,b));
+
   }
 }
