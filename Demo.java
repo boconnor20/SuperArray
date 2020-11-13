@@ -86,6 +86,13 @@ public class Demo{
       System.out.println("Whoa out of this world");
     }
 
+    try{SuperArray OogaBooga4=new SuperArray(2);
+    System.out.println(OogaBooga4.remove(4));
+    }
+    catch (IndexOutOfBoundsException e){
+      System.out.println("Whoa out of this world");
+    }
+
     SuperArray a= new SuperArray();
     a.add("a"); a.add("b"); a.add("c"); a.add("d"); a.add("e"); a.add("f");
     SuperArray b= new SuperArray();
