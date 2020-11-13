@@ -62,7 +62,7 @@ public class Demo{
     System.out.println(OogaBooga);
     }
     catch (IllegalArgumentException e){
-      System.out.println("Woah buddy we don't do that here");
+      System.out.println("Whoa buddy we don't do that here");
     }
 
     try{SuperArray OogaBooga2=new SuperArray(2);
@@ -74,6 +74,13 @@ public class Demo{
 
     try{SuperArray OogaBooga3=new SuperArray(2);
     System.out.println(OogaBooga3.set(3, "Booga"));
+    }
+    catch (IndexOutOfBoundsException e){
+      System.out.println("Whoa out of this world");
+    }
+
+    try{SuperArray OogaBooga4=new SuperArray(2);
+    OogaBooga4.add(4,"Booga");
     }
     catch (IndexOutOfBoundsException e){
       System.out.println("Whoa out of this world");
