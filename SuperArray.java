@@ -30,10 +30,11 @@ public class SuperArray{
   }
   //1e
   public String get(int index){
-    if (index<size&&index>=0){
+    if(index >= size || index < 0){
+      throw new IndexOutOfBoundsException("index, " + index + ", is out of bounds");
+    }else{
       return data[index];
     }
-    else return null;
   }
   //1f
   public String set(int index, String element){
@@ -85,7 +86,7 @@ public class SuperArray{
 
   public void add(int index, String element){
     if(index >= size || index < 0){
-      throw new IndexOutOfBoundsException("Index, " + index + ", is out of range");
+      throw new IndexOutOfBoundsException("index, " + index + ", is out of range");
     }
     for (int i=size; i>index; i--){
       data[i]=data[i-1];
