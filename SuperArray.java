@@ -7,7 +7,11 @@ public class SuperArray{
     data= new String[10];
     size=0;
   }
+
   public SuperArray(int initialCapacity){
+    if (initialCapacity <0){
+      throw new IllegalArgumentException("initialCapacity, " + initialCapacity + ", cannot be negative");
+    }
     data= new String[initialCapacity];
     size=0;
   }
@@ -80,6 +84,9 @@ public class SuperArray{
   }
 
   public void add(int index, String element){
+    if(index >= size || index < 0){
+      throw new IndexOutOfBoundsException("Index, " + index + ", is out of range");
+    }
     for (int i=size; i>index; i--){
       data[i]=data[i-1];
     }
@@ -137,7 +144,7 @@ public class SuperArray{
 
   //Private Methods 1g
   private void resize(){
-    String[] biggerArray=new String[data.length*2];
+    String[] biggerArray=new String[data.length*2+1];
         for (int i=0; i<data.length;i++){
             biggerArray[i]=data[i];
         }
