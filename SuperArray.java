@@ -32,18 +32,21 @@ public class SuperArray{
   public String get(int index){
     if(index >= size || index < 0){
       throw new IndexOutOfBoundsException("index, " + index + ", is out of bounds");
-    }else{
+    }
+    else{
       return data[index];
     }
   }
   //1f
   public String set(int index, String element){
-    if (index<size&&index>=0){
-      String replacedvalue=data[index];
-      data[index]=element;
-      return replacedvalue;
-  }
-    else return null;
+    if(index >= size || index < 0){
+      throw new IndexOutOfBoundsException("index, " + index + ", is out of bounds");
+    }
+    else{
+      String replaced = data[index];
+      data[index] = element;
+      return replaced;
+    }
   }
   //class 11/4/20
   public boolean isEmpty(){
@@ -97,7 +100,7 @@ public class SuperArray{
 
   public String remove(int index){
     if (index>=size||index<0){
-      return null;
+      throw new IndexOutOfBoundsException("index, " + index + ", is out of bounds");    
     }
     else {
       String removed=data[index];
