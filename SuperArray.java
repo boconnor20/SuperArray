@@ -88,19 +88,27 @@ public class SuperArray{
   }
 
   public void add(int index, String element){
-    if(index >= size || index < 0){
+    if(index > size || index < 0){
       throw new IndexOutOfBoundsException("index, " + index + ", is out of range");
     }
+    if(size()==index){
+      add(element);
+    }
+    else{
+      if(size == data.length){
+        resize();
+      }
     for (int i=size; i>index; i--){
       data[i]=data[i-1];
     }
     data[index]=element;
     size++;
   }
+}
 
   public String remove(int index){
     if (index>=size||index<0){
-      throw new IndexOutOfBoundsException("index, " + index + ", is out of bounds");    
+      throw new IndexOutOfBoundsException("index, " + index + ", is out of bounds");
     }
     else {
       String removed=data[index];
